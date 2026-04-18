@@ -4,10 +4,15 @@ on:
   push:
     branches: [ main ] # O deploy acontece sempre que você der push na main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+permissions:
+  contents: read
+  packages: write
 
+jobs:
+ deploy:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Resolve o aviso do Node.js
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
