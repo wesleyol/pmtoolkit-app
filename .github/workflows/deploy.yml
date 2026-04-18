@@ -1,0 +1,52 @@
+name: Deploy PMToolkit MVP
+
+on:
+  push:
+    branches: [ main ] # O deploy acontece sempre que você der push na main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login no GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build e Push da Imagem Docker
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+
+      - name: Deploy na VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Login no registro de imagens dentro da VPS
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            
+            # Para a aplicação antiga e remove os containers órfãos
+            docker stop pmtoolkit-app || true
+            docker rm pmtoolkit-app || true
+            
+            # Puxa a versão mais nova e sobe o container
+            docker pull ghcr.io/${{ github.repository }}:latest
+            docker run -d \
+              --name pmtoolkit-app \
+              --restart unless-stopped \
+              --network nginx-network \
+              ghcr.io/${{ github.repository }}:latest
