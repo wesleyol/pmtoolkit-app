@@ -1,8 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Isso gera um build otimizado para Docker, criando uma pasta 'standalone'
+  output: 'standalone', 
 };
 
 export default nextConfig;
