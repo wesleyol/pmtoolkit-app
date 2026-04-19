@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, LayoutDashboard, Github } from 'lucide-react';
+import { Globe, LayoutDashboard } from 'lucide-react';
 import CalculadoraROI from '@/components/CalculadoraROI';
 
 export default function Home() {
