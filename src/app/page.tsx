@@ -1,59 +1,82 @@
-import React from 'react';
-import { Globe, LayoutDashboard } from 'lucide-react';
+'use client';
+import React, { useState } from 'react';
+import Sidebar from '@/components/Sidebar';
 import CalculadoraROI from '@/components/CalculadoraROI';
+import { Search, Filter } from 'lucide-react';
+
+const CATEGORIES = [
+  { id: 'all', label: 'Todas' },
+  { id: 'business', label: 'Negócios' },
+  { id: 'growth', label: 'Crescimento' },
+  { id: 'engineering', label: 'Engenharia' },
+  { id: 'ux', label: 'UX / Produto' },
+];
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState('all');
+
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5]">
-      {/* Nav Simplificada */}
-      <nav className="border-b border-zinc-800 p-4 bg-[#09090b]/50 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center font-bold">PM</div>
-            <span className="text-xl font-bold tracking-tighter">PMToolkit<span className="text-purple-500">.app</span></span>
-          </div>
-          <div className="flex gap-4 items-center text-sm">
-            <button className="text-purple-500 font-bold underline underline-offset-4">PT</button>
-            <button className="text-zinc-500 hover:text-zinc-300">EN</button>
-            <button className="text-zinc-500 hover:text-zinc-300">ES</button>
-          </div>
-        </div>
-      </nav>
+    <div className="flex min-h-screen bg-[#0A0B0E]">
+      <Sidebar />
 
-      <main className="max-w-6xl mx-auto p-6 md:p-12 space-y-20">
-        {/* Intro Section */}
-        <section className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent">
-            Calculadora de ROI
-          </h1>
-          <p className="text-zinc-400 max-w-xl text-lg">
-            Valide o retorno financeiro dos seus projetos com embasamento científico e benchmarks de mercado.
-          </p>
+      <main className="flex-1 p-6 md:p-12">
+        <header className="max-w-5xl mx-auto mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <h1 className="text-4xl font-black text-white tracking-tight mb-2">
+              Toolbox de <span className="text-[#8C3AFF]">Produto</span>
+            </h1>
+            <p className="text-zinc-500">Selecione a ferramenta ideal para sua tomada de decisão hoje.</p>
+          </div>
+
+          <div className="relative group">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-[#8C3AFF] transition-colors" size={18} />
+            <input 
+              type="text" 
+              placeholder="Buscar ferramenta..." 
+              className="bg-zinc-900 border border-zinc-800 rounded-xl py-3 pl-10 pr-4 text-sm text-white focus:border-[#8C3AFF] outline-none w-full md:w-64 transition-all"
+            />
+          </div>
+        </header>
+
+        {/* Filtros por Tags */}
+        <section className="max-w-5xl mx-auto mb-10">
+          <div className="flex items-center gap-3 flex-wrap">
+            <Filter size={16} className="text-zinc-600 mr-2" />
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveTab(cat.id)}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
+                  activeTab === cat.id 
+                    ? 'bg-[#8C3AFF] border-[#8C3AFF] text-white shadow-[0_0_15px_rgba(140,58,255,0.3)]' 
+                    : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-600'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
         </section>
 
-        {/* Componente Isolado da Calculadora */}
-        <section className="bg-zinc-950 border border-zinc-800 p-4 md:p-8 rounded-3xl shadow-2xl">
-          <CalculadoraROI />
-        </section>
-
-        {/* Seção Sobre o Projeto (O seu Roadmap/Idealizador) */}
-        <section className="grid md:grid-cols-2 gap-12 py-20 border-t border-zinc-800">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">O Projeto PMToolkit</h2>
-            <p className="text-zinc-500 text-sm leading-relaxed">
-              Idealizado para elevar o nível de tomada de decisão estratégica em tecnologia. O toolkit utiliza princípios de Engenharia de Software para transformar dados brutos em decisões acionáveis.
-            </p>
-            <div className="flex gap-3">
-              <span className="bg-zinc-800 px-3 py-1 rounded-full text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Discovery</span>
-              <span className="bg-purple-900/30 text-purple-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Delivery</span>
+        {/* Grid de Ferramentas / Área de Trabalho */}
+        <div className="max-w-5xl mx-auto">
+          {/* Lógica de exibição: Se "Negócios" ou "Todas" estiverem ativos, mostra ROI */}
+          {(activeTab === 'all' || activeTab === 'business') && (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <div className="bg-zinc-950 border border-zinc-800 p-8 rounded-[2rem] shadow-2xl">
+                 <CalculadoraROI />
+              </div>
             </div>
-          </div>
-          <div className="bg-zinc-900/30 p-6 rounded-2xl border border-dashed border-zinc-700 flex flex-col justify-center items-center text-center">
-            <LayoutDashboard className="text-purple-500 mb-2" />
-            <h4 className="font-bold">Roadmap Público</h4>
-            <p className="text-xs text-zinc-500">Acompanhe o desenvolvimento do backlog e as próximas ferramentas.</p>
-          </div>
-        </section>
+          )}
+
+          {/* Placeholder para futuras calculadoras */}
+          {activeTab !== 'all' && activeTab !== 'business' && (
+            <div className="py-20 text-center border-2 border-dashed border-zinc-800 rounded-3xl">
+              <p className="text-zinc-600">Nenhuma ferramenta de {activeTab} disponível nesta sprint.</p>
+              <button className="mt-4 text-xs text-[#8C3AFF] font-bold underline">Acompanhar Backlog</button>
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );
