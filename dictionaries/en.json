@@ -1,0 +1,222 @@
+{
+  "app": {
+    "name": "PMToolkit",
+    "tagline": "Product Management Tools",
+    "description": "Essential calculators and tools for Product Managers"
+  },
+  "nav": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "tools": "Tools",
+    "about": "About"
+  },
+  "categories": {
+    "all": "All",
+    "business": "Business & Viability",
+    "growth": "Growth & Lifecycle",
+    "ux": "UX/Product",
+    "engineering": "Engineering & Feasibility"
+  },
+  "search": {
+    "placeholder": "Search calculators...",
+    "noResults": "No results found"
+  },
+  "calculator": {
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "result": "Result",
+    "downloadChart": "Download Chart",
+    "inputs": "Input Data",
+    "output": "Output"
+  },
+  "feedback": {
+    "excellent": "Excellent",
+    "good": "Good",
+    "attention": "Attention",
+    "excellentDesc": "Result above market benchmark!",
+    "goodDesc": "Result within expected range.",
+    "attentionDesc": "Result below expectations. Consider improvement actions."
+  },
+  "calculators": {
+    "roi": {
+      "name": "ROI",
+      "fullName": "Return on Investment",
+      "description": "Calculate return on investment to evaluate the profitability of a project or campaign.",
+      "investment": "Investment",
+      "return": "Return Obtained",
+      "resultLabel": "ROI",
+      "unit": "%"
+    },
+    "cac": {
+      "name": "CAC",
+      "fullName": "Customer Acquisition Cost",
+      "description": "Calculate customer acquisition cost to optimize your marketing and sales investments.",
+      "marketingCost": "Marketing Cost",
+      "salesCost": "Sales Cost",
+      "newCustomers": "New Customers",
+      "resultLabel": "CAC",
+      "unit": ""
+    },
+    "ltv": {
+      "name": "LTV",
+      "fullName": "Customer Lifetime Value",
+      "description": "Calculate customer lifetime value to understand how much revenue each customer generates over time.",
+      "arpu": "Average Revenue Per User (ARPU)",
+      "lifespan": "Average Lifespan (months)",
+      "resultLabel": "LTV",
+      "unit": ""
+    },
+    "mrr": {
+      "name": "MRR/ARR",
+      "fullName": "Monthly/Annual Recurring Revenue",
+      "description": "Calculate monthly and annual recurring revenue for your SaaS business.",
+      "customers": "Number of Customers",
+      "avgTicket": "Average Monthly Ticket",
+      "resultLabel": "MRR",
+      "arrLabel": "ARR",
+      "unit": ""
+    },
+    "grossMargin": {
+      "name": "Gross Margin",
+      "fullName": "Gross Margin",
+      "description": "Calculate gross margin to understand the basic profitability of your product or service.",
+      "revenue": "Total Revenue",
+      "directCosts": "Direct Costs",
+      "resultLabel": "Gross Margin",
+      "unit": "%"
+    },
+    "activationRate": {
+      "name": "Activation Rate",
+      "fullName": "Activation Rate",
+      "description": "Measure the percentage of users who complete the key activation action after signup.",
+      "signups": "Total Signups",
+      "activations": "Activated Users",
+      "resultLabel": "Activation Rate",
+      "unit": "%"
+    },
+    "churnRate": {
+      "name": "Churn Rate",
+      "fullName": "Churn Rate / Retention Rate",
+      "description": "Calculate churn and retention rate to monitor your business health.",
+      "startCustomers": "Customers at Start",
+      "lostCustomers": "Lost Customers",
+      "resultLabel": "Churn Rate",
+      "retentionLabel": "Retention Rate",
+      "unit": "%"
+    },
+    "dauMau": {
+      "name": "DAU/MAU",
+      "fullName": "Daily/Monthly Active Users Ratio",
+      "description": "Calculate the ratio of daily vs monthly active users to measure engagement.",
+      "dau": "Daily Active Users (DAU)",
+      "mau": "Monthly Active Users (MAU)",
+      "resultLabel": "DAU/MAU Ratio",
+      "unit": "%"
+    },
+    "kFactor": {
+      "name": "K-Factor",
+      "fullName": "Virality Coefficient",
+      "description": "Calculate your product's virality factor to understand organic growth.",
+      "invitesPerUser": "Invites per User",
+      "conversionRate": "Conversion Rate (%)",
+      "resultLabel": "K-Factor",
+      "unit": ""
+    },
+    "nps": {
+      "name": "NPS",
+      "fullName": "Net Promoter Score",
+      "description": "Calculate NPS to measure customer loyalty and satisfaction.",
+      "promoters": "Promoters (9-10)",
+      "passives": "Passives (7-8)",
+      "detractors": "Detractors (0-6)",
+      "resultLabel": "NPS",
+      "unit": ""
+    },
+    "csat": {
+      "name": "CSAT",
+      "fullName": "Customer Satisfaction Score",
+      "description": "Calculate customer satisfaction score based on surveys.",
+      "positiveResponses": "Positive Responses",
+      "totalResponses": "Total Responses",
+      "resultLabel": "CSAT",
+      "unit": "%"
+    },
+    "ttv": {
+      "name": "TTV",
+      "fullName": "Time to Value",
+      "description": "Calculate the average time until the customer perceives value in the product.",
+      "totalTime": "Total Time Sum (hours)",
+      "userCount": "Number of Users",
+      "resultLabel": "Average TTV",
+      "unit": "hours"
+    },
+    "taskSuccessRate": {
+      "name": "Task Success Rate",
+      "fullName": "Task Success Rate",
+      "description": "Measure the percentage of tasks successfully completed by users.",
+      "successfulTasks": "Successful Tasks",
+      "totalAttempts": "Total Attempts",
+      "resultLabel": "Success Rate",
+      "unit": "%"
+    },
+    "featureAdoption": {
+      "name": "Feature Adoption",
+      "fullName": "Feature Adoption Rate",
+      "description": "Calculate the percentage of users who adopted a new feature.",
+      "featureUsers": "Feature Users",
+      "totalUsers": "Total User Base",
+      "resultLabel": "Adoption Rate",
+      "unit": "%"
+    },
+    "leadTime": {
+      "name": "Lead Time",
+      "fullName": "Lead Time for Changes",
+      "description": "Measure the average time from commit to production deployment.",
+      "avgTime": "Average Time",
+      "timeUnit": "Time Unit",
+      "hours": "Hours",
+      "days": "Days",
+      "resultLabel": "Lead Time",
+      "unit": ""
+    },
+    "deploymentFrequency": {
+      "name": "Deployment Frequency",
+      "fullName": "Deployment Frequency",
+      "description": "Calculate how many deploys are performed per time period.",
+      "deploys": "Number of Deploys",
+      "period": "Period (days)",
+      "resultLabel": "Frequency",
+      "unit": "deploys/day"
+    },
+    "changeFailureRate": {
+      "name": "Change Failure Rate",
+      "fullName": "Change Failure Rate",
+      "description": "Calculate the percentage of deploys that result in failures or rollbacks.",
+      "failedDeploys": "Failed Deploys",
+      "totalDeploys": "Total Deploys",
+      "resultLabel": "Failure Rate",
+      "unit": "%"
+    },
+    "mttr": {
+      "name": "MTTR",
+      "fullName": "Mean Time to Recovery",
+      "description": "Calculate the average time to recovery after production incidents.",
+      "totalDowntime": "Total Downtime (min)",
+      "incidents": "Number of Incidents",
+      "resultLabel": "MTTR",
+      "unit": "min"
+    }
+  },
+  "footer": {
+    "about": "About PMToolkit",
+    "aboutDesc": "A collection of tools and calculators for Product Managers.",
+    "roadmap": "Roadmap",
+    "prds": "PRDs",
+    "canvas": "Business Model Canvas",
+    "creator": "About the Creator",
+    "creatorDesc": "Product Manager passionate about data and tools that facilitate decision making.",
+    "references": "References",
+    "referencesDesc": "Recommended books and materials to deepen your knowledge.",
+    "copyright": "© 2024 PMToolkit. All rights reserved."
+  }
+}

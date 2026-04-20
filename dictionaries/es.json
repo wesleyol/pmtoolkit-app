@@ -1,0 +1,222 @@
+{
+  "app": {
+    "name": "PMToolkit",
+    "tagline": "Herramientas de Gestión de Producto",
+    "description": "Calculadoras y herramientas esenciales para Product Managers"
+  },
+  "nav": {
+    "home": "Inicio",
+    "calculators": "Calculadoras",
+    "tools": "Herramientas",
+    "about": "Acerca de"
+  },
+  "categories": {
+    "all": "Todas",
+    "business": "Business & Viability",
+    "growth": "Growth & Lifecycle",
+    "ux": "UX/Product",
+    "engineering": "Engineering & Feasibility"
+  },
+  "search": {
+    "placeholder": "Buscar calculadoras...",
+    "noResults": "No se encontraron resultados"
+  },
+  "calculator": {
+    "calculate": "Calcular",
+    "reset": "Limpiar",
+    "result": "Resultado",
+    "downloadChart": "Descargar Gráfico",
+    "inputs": "Datos de Entrada",
+    "output": "Resultado"
+  },
+  "feedback": {
+    "excellent": "Excelente",
+    "good": "Bueno",
+    "attention": "Atención",
+    "excellentDesc": "¡Resultado por encima del benchmark del mercado!",
+    "goodDesc": "Resultado dentro del rango esperado.",
+    "attentionDesc": "Resultado por debajo de lo esperado. Considere acciones de mejora."
+  },
+  "calculators": {
+    "roi": {
+      "name": "ROI",
+      "fullName": "Retorno de la Inversión",
+      "description": "Calcule el retorno de la inversión para evaluar la rentabilidad de un proyecto o campaña.",
+      "investment": "Inversión",
+      "return": "Retorno Obtenido",
+      "resultLabel": "ROI",
+      "unit": "%"
+    },
+    "cac": {
+      "name": "CAC",
+      "fullName": "Costo de Adquisición de Cliente",
+      "description": "Calcule el costo de adquisición de clientes para optimizar sus inversiones en marketing y ventas.",
+      "marketingCost": "Costo de Marketing",
+      "salesCost": "Costo de Ventas",
+      "newCustomers": "Nuevos Clientes",
+      "resultLabel": "CAC",
+      "unit": ""
+    },
+    "ltv": {
+      "name": "LTV",
+      "fullName": "Valor de Vida del Cliente",
+      "description": "Calcule el valor de vida del cliente para entender cuánto genera cada cliente a lo largo del tiempo.",
+      "arpu": "Ingreso Promedio por Usuario (ARPU)",
+      "lifespan": "Tiempo Promedio de Vida (meses)",
+      "resultLabel": "LTV",
+      "unit": ""
+    },
+    "mrr": {
+      "name": "MRR/ARR",
+      "fullName": "Ingresos Recurrentes Mensuales/Anuales",
+      "description": "Calcule los ingresos recurrentes mensuales y anuales de su negocio SaaS.",
+      "customers": "Número de Clientes",
+      "avgTicket": "Ticket Promedio Mensual",
+      "resultLabel": "MRR",
+      "arrLabel": "ARR",
+      "unit": ""
+    },
+    "grossMargin": {
+      "name": "Gross Margin",
+      "fullName": "Margen Bruto",
+      "description": "Calcule el margen bruto para entender la rentabilidad básica de su producto o servicio.",
+      "revenue": "Ingresos Totales",
+      "directCosts": "Costos Directos",
+      "resultLabel": "Margen Bruto",
+      "unit": "%"
+    },
+    "activationRate": {
+      "name": "Activation Rate",
+      "fullName": "Tasa de Activación",
+      "description": "Mida el porcentaje de usuarios que completan la acción clave de activación después del registro.",
+      "signups": "Total de Registros",
+      "activations": "Usuarios Activados",
+      "resultLabel": "Tasa de Activación",
+      "unit": "%"
+    },
+    "churnRate": {
+      "name": "Churn Rate",
+      "fullName": "Tasa de Churn / Retención",
+      "description": "Calcule la tasa de cancelación y retención de clientes para monitorear la salud de su negocio.",
+      "startCustomers": "Clientes al Inicio",
+      "lostCustomers": "Clientes Perdidos",
+      "resultLabel": "Churn Rate",
+      "retentionLabel": "Retention Rate",
+      "unit": "%"
+    },
+    "dauMau": {
+      "name": "DAU/MAU",
+      "fullName": "Ratio de Usuarios Activos Diarios/Mensuales",
+      "description": "Calcule la proporción de usuarios activos diarios vs mensuales para medir el engagement.",
+      "dau": "Usuarios Activos Diarios (DAU)",
+      "mau": "Usuarios Activos Mensuales (MAU)",
+      "resultLabel": "Ratio DAU/MAU",
+      "unit": "%"
+    },
+    "kFactor": {
+      "name": "K-Factor",
+      "fullName": "Coeficiente de Viralidad",
+      "description": "Calcule el factor de viralidad de su producto para entender el crecimiento orgánico.",
+      "invitesPerUser": "Invitaciones por Usuario",
+      "conversionRate": "Tasa de Conversión (%)",
+      "resultLabel": "K-Factor",
+      "unit": ""
+    },
+    "nps": {
+      "name": "NPS",
+      "fullName": "Net Promoter Score",
+      "description": "Calcule el NPS para medir la lealtad y satisfacción de sus clientes.",
+      "promoters": "Promotores (9-10)",
+      "passives": "Neutros (7-8)",
+      "detractors": "Detractores (0-6)",
+      "resultLabel": "NPS",
+      "unit": ""
+    },
+    "csat": {
+      "name": "CSAT",
+      "fullName": "Índice de Satisfacción del Cliente",
+      "description": "Calcule el índice de satisfacción del cliente basado en encuestas.",
+      "positiveResponses": "Respuestas Positivas",
+      "totalResponses": "Total de Respuestas",
+      "resultLabel": "CSAT",
+      "unit": "%"
+    },
+    "ttv": {
+      "name": "TTV",
+      "fullName": "Tiempo hasta el Valor",
+      "description": "Calcule el tiempo promedio hasta que el cliente percibe valor en el producto.",
+      "totalTime": "Suma de Tiempos (horas)",
+      "userCount": "Número de Usuarios",
+      "resultLabel": "TTV Promedio",
+      "unit": "horas"
+    },
+    "taskSuccessRate": {
+      "name": "Task Success Rate",
+      "fullName": "Tasa de Éxito de Tareas",
+      "description": "Mida el porcentaje de tareas completadas con éxito por los usuarios.",
+      "successfulTasks": "Tareas Exitosas",
+      "totalAttempts": "Total de Intentos",
+      "resultLabel": "Tasa de Éxito",
+      "unit": "%"
+    },
+    "featureAdoption": {
+      "name": "Feature Adoption",
+      "fullName": "Tasa de Adopción de Feature",
+      "description": "Calcule el porcentaje de usuarios que adoptaron una nueva funcionalidad.",
+      "featureUsers": "Usuarios de la Feature",
+      "totalUsers": "Base Total de Usuarios",
+      "resultLabel": "Tasa de Adopción",
+      "unit": "%"
+    },
+    "leadTime": {
+      "name": "Lead Time",
+      "fullName": "Lead Time for Changes",
+      "description": "Mida el tiempo promedio desde el commit hasta el deploy en producción.",
+      "avgTime": "Tiempo Promedio",
+      "timeUnit": "Unidad de Tiempo",
+      "hours": "Horas",
+      "days": "Días",
+      "resultLabel": "Lead Time",
+      "unit": ""
+    },
+    "deploymentFrequency": {
+      "name": "Deployment Frequency",
+      "fullName": "Frecuencia de Deploy",
+      "description": "Calcule cuántos deploys se realizan por período de tiempo.",
+      "deploys": "Número de Deploys",
+      "period": "Período (días)",
+      "resultLabel": "Frecuencia",
+      "unit": "deploys/día"
+    },
+    "changeFailureRate": {
+      "name": "Change Failure Rate",
+      "fullName": "Tasa de Fallo de Cambios",
+      "description": "Calcule el porcentaje de deploys que resultan en fallos o rollbacks.",
+      "failedDeploys": "Deploys Fallidos",
+      "totalDeploys": "Total de Deploys",
+      "resultLabel": "Tasa de Fallo",
+      "unit": "%"
+    },
+    "mttr": {
+      "name": "MTTR",
+      "fullName": "Tiempo Promedio de Recuperación",
+      "description": "Calcule el tiempo promedio de recuperación después de incidentes en producción.",
+      "totalDowntime": "Tiempo Total de Downtime (min)",
+      "incidents": "Número de Incidentes",
+      "resultLabel": "MTTR",
+      "unit": "min"
+    }
+  },
+  "footer": {
+    "about": "Acerca de PMToolkit",
+    "aboutDesc": "Una colección de herramientas y calculadoras para Product Managers.",
+    "roadmap": "Roadmap",
+    "prds": "PRDs",
+    "canvas": "Business Model Canvas",
+    "creator": "Acerca del Creador",
+    "creatorDesc": "Product Manager apasionado por los datos y herramientas que facilitan la toma de decisiones.",
+    "references": "Referencias",
+    "referencesDesc": "Libros y materiales recomendados para profundizar sus conocimientos.",
+    "copyright": "© 2024 PMToolkit. Todos los derechos reservados."
+  }
+}

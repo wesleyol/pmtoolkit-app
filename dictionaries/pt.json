@@ -1,0 +1,222 @@
+{
+  "app": {
+    "name": "PMToolkit",
+    "tagline": "Ferramentas de Gestão de Produto",
+    "description": "Calculadoras e ferramentas essenciais para Product Managers"
+  },
+  "nav": {
+    "home": "Início",
+    "calculators": "Calculadoras",
+    "tools": "Ferramentas",
+    "about": "Sobre"
+  },
+  "categories": {
+    "all": "Todas",
+    "business": "Business & Viability",
+    "growth": "Growth & Lifecycle",
+    "ux": "UX/Product",
+    "engineering": "Engineering & Feasibility"
+  },
+  "search": {
+    "placeholder": "Buscar calculadoras...",
+    "noResults": "Nenhum resultado encontrado"
+  },
+  "calculator": {
+    "calculate": "Calcular",
+    "reset": "Limpar",
+    "result": "Resultado",
+    "downloadChart": "Baixar Gráfico",
+    "inputs": "Dados de Entrada",
+    "output": "Resultado"
+  },
+  "feedback": {
+    "excellent": "Excelente",
+    "good": "Bom",
+    "attention": "Atenção",
+    "excellentDesc": "Resultado acima do benchmark do mercado!",
+    "goodDesc": "Resultado dentro da média esperada.",
+    "attentionDesc": "Resultado abaixo do esperado. Considere ações de melhoria."
+  },
+  "calculators": {
+    "roi": {
+      "name": "ROI",
+      "fullName": "Return on Investment",
+      "description": "Calcule o retorno sobre investimento para avaliar a lucratividade de um projeto ou campanha.",
+      "investment": "Investimento",
+      "return": "Retorno Obtido",
+      "resultLabel": "ROI",
+      "unit": "%"
+    },
+    "cac": {
+      "name": "CAC",
+      "fullName": "Customer Acquisition Cost",
+      "description": "Calcule o custo de aquisição de clientes para otimizar seus investimentos em marketing e vendas.",
+      "marketingCost": "Custo de Marketing",
+      "salesCost": "Custo de Vendas",
+      "newCustomers": "Novos Clientes",
+      "resultLabel": "CAC",
+      "unit": ""
+    },
+    "ltv": {
+      "name": "LTV",
+      "fullName": "Customer Lifetime Value",
+      "description": "Calcule o valor vitalício do cliente para entender quanto cada cliente gera de receita ao longo do tempo.",
+      "arpu": "Receita Média por Usuário (ARPU)",
+      "lifespan": "Tempo Médio de Vida (meses)",
+      "resultLabel": "LTV",
+      "unit": ""
+    },
+    "mrr": {
+      "name": "MRR/ARR",
+      "fullName": "Monthly/Annual Recurring Revenue",
+      "description": "Calcule a receita recorrente mensal e anual do seu negócio SaaS.",
+      "customers": "Número de Clientes",
+      "avgTicket": "Ticket Médio Mensal",
+      "resultLabel": "MRR",
+      "arrLabel": "ARR",
+      "unit": ""
+    },
+    "grossMargin": {
+      "name": "Gross Margin",
+      "fullName": "Margem Bruta",
+      "description": "Calcule a margem bruta para entender a lucratividade básica do seu produto ou serviço.",
+      "revenue": "Receita Total",
+      "directCosts": "Custos Diretos",
+      "resultLabel": "Margem Bruta",
+      "unit": "%"
+    },
+    "activationRate": {
+      "name": "Activation Rate",
+      "fullName": "Taxa de Ativação",
+      "description": "Meça a porcentagem de usuários que completam a ação-chave de ativação após o cadastro.",
+      "signups": "Total de Signups",
+      "activations": "Usuários Ativados",
+      "resultLabel": "Taxa de Ativação",
+      "unit": "%"
+    },
+    "churnRate": {
+      "name": "Churn Rate",
+      "fullName": "Taxa de Churn / Retenção",
+      "description": "Calcule a taxa de cancelamento e retenção de clientes para monitorar a saúde do seu negócio.",
+      "startCustomers": "Clientes no Início",
+      "lostCustomers": "Clientes Perdidos",
+      "resultLabel": "Churn Rate",
+      "retentionLabel": "Retention Rate",
+      "unit": "%"
+    },
+    "dauMau": {
+      "name": "DAU/MAU",
+      "fullName": "Daily/Monthly Active Users Ratio",
+      "description": "Calcule a proporção de usuários ativos diários vs mensais para medir o engajamento.",
+      "dau": "Usuários Ativos Diários (DAU)",
+      "mau": "Usuários Ativos Mensais (MAU)",
+      "resultLabel": "DAU/MAU Ratio",
+      "unit": "%"
+    },
+    "kFactor": {
+      "name": "K-Factor",
+      "fullName": "Coeficiente de Viralidade",
+      "description": "Calcule o fator de viralidade do seu produto para entender o crescimento orgânico.",
+      "invitesPerUser": "Convites por Usuário",
+      "conversionRate": "Taxa de Conversão (%)",
+      "resultLabel": "K-Factor",
+      "unit": ""
+    },
+    "nps": {
+      "name": "NPS",
+      "fullName": "Net Promoter Score",
+      "description": "Calcule o NPS para medir a lealdade e satisfação dos seus clientes.",
+      "promoters": "Promotores (9-10)",
+      "passives": "Neutros (7-8)",
+      "detractors": "Detratores (0-6)",
+      "resultLabel": "NPS",
+      "unit": ""
+    },
+    "csat": {
+      "name": "CSAT",
+      "fullName": "Customer Satisfaction Score",
+      "description": "Calcule o índice de satisfação do cliente baseado em pesquisas.",
+      "positiveResponses": "Respostas Positivas",
+      "totalResponses": "Total de Respostas",
+      "resultLabel": "CSAT",
+      "unit": "%"
+    },
+    "ttv": {
+      "name": "TTV",
+      "fullName": "Time to Value",
+      "description": "Calcule o tempo médio até o cliente perceber valor no produto.",
+      "totalTime": "Soma dos Tempos (horas)",
+      "userCount": "Número de Usuários",
+      "resultLabel": "TTV Médio",
+      "unit": "horas"
+    },
+    "taskSuccessRate": {
+      "name": "Task Success Rate",
+      "fullName": "Taxa de Sucesso de Tarefas",
+      "description": "Meça a porcentagem de tarefas completadas com sucesso pelos usuários.",
+      "successfulTasks": "Tarefas Bem-sucedidas",
+      "totalAttempts": "Total de Tentativas",
+      "resultLabel": "Taxa de Sucesso",
+      "unit": "%"
+    },
+    "featureAdoption": {
+      "name": "Feature Adoption",
+      "fullName": "Taxa de Adoção de Feature",
+      "description": "Calcule a porcentagem de usuários que adotaram uma nova funcionalidade.",
+      "featureUsers": "Usuários da Feature",
+      "totalUsers": "Base Total de Usuários",
+      "resultLabel": "Taxa de Adoção",
+      "unit": "%"
+    },
+    "leadTime": {
+      "name": "Lead Time",
+      "fullName": "Lead Time for Changes",
+      "description": "Meça o tempo médio desde o commit até o deploy em produção.",
+      "avgTime": "Tempo Médio",
+      "timeUnit": "Unidade de Tempo",
+      "hours": "Horas",
+      "days": "Dias",
+      "resultLabel": "Lead Time",
+      "unit": ""
+    },
+    "deploymentFrequency": {
+      "name": "Deployment Frequency",
+      "fullName": "Frequência de Deploy",
+      "description": "Calcule quantos deploys são realizados por período de tempo.",
+      "deploys": "Número de Deploys",
+      "period": "Período (dias)",
+      "resultLabel": "Frequência",
+      "unit": "deploys/dia"
+    },
+    "changeFailureRate": {
+      "name": "Change Failure Rate",
+      "fullName": "Taxa de Falha de Mudanças",
+      "description": "Calcule a porcentagem de deploys que resultam em falhas ou rollbacks.",
+      "failedDeploys": "Deploys com Falha",
+      "totalDeploys": "Total de Deploys",
+      "resultLabel": "Taxa de Falha",
+      "unit": "%"
+    },
+    "mttr": {
+      "name": "MTTR",
+      "fullName": "Mean Time to Recovery",
+      "description": "Calcule o tempo médio para recuperação após incidentes em produção.",
+      "totalDowntime": "Tempo Total de Downtime (min)",
+      "incidents": "Número de Incidentes",
+      "resultLabel": "MTTR",
+      "unit": "min"
+    }
+  },
+  "footer": {
+    "about": "Sobre o PMToolkit",
+    "aboutDesc": "Uma coleção de ferramentas e calculadoras para Product Managers.",
+    "roadmap": "Roadmap",
+    "prds": "PRDs",
+    "canvas": "Business Model Canvas",
+    "creator": "Sobre o Criador",
+    "creatorDesc": "Product Manager apaixonado por dados e ferramentas que facilitam a tomada de decisão.",
+    "references": "Referências",
+    "referencesDesc": "Livros e materiais recomendados para aprofundar seus conhecimentos.",
+    "copyright": "© 2024 PMToolkit. Todos os direitos reservados."
+  }
+}
