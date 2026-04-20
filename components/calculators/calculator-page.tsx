@@ -95,7 +95,8 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
           <CalculatorForm
             fields={calculator.fields}
             values={values}
-            onChange={setValues}
+            // A correção: Agora o pai entende a chave e preserva o estado anterior (...prev)
+            onChange={(key, value) => setValues(prev => ({ ...prev, [key]: value }))} 
             onCalculate={handleCalculate}
             slug={slug}
           />
