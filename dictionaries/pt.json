@@ -5,35 +5,222 @@
   },
   "app": {
     "name": "PMToolkit",
-    "tagline": "Ferramentas de Gestão de Produto"
+    "tagline": "Ferramentas de Gestão de Produto",
+    "description": "Calculadoras e ferramentas essenciais para Product Managers"
   },
-  "calculator": {
-    "inputs": "Parâmetros da Análise",
-    "calculate": "Calcular Métrica",
-    "result": "Resultado da Análise"
+  "nav": {
+    "home": "Início",
+    "calculators": "Calculadoras",
+    "tools": "Ferramentas",
+    "about": "Sobre"
   },
   "categories": {
-    "business": "Negócios",
-    "growth": "Crescimento",
-    "ux": "UX & Produto",
-    "engineering": "Engenharia"
+    "all": "Todas",
+    "business": "Negócios & Viabilidade",
+    "growth": "Crescimento & Retenção",
+    "ux": "UX / Produto",
+    "engineering": "Engenharia & Performance"
+  },
+  "search": {
+    "placeholder": "Buscar calculadoras...",
+    "noResults": "Nenhum resultado encontrado"
+  },
+  "calculator": {
+    "calculate": "Calcular Métrica",
+    "reset": "Limpar",
+    "result": "Resultado da Análise",
+    "downloadChart": "Baixar Gráfico",
+    "inputs": "Parâmetros da Análise",
+    "output": "Saída"
+  },
+  "feedback": {
+    "excellent": "Excelente",
+    "good": "Moderado",
+    "attention": "Atenção",
+    "excellentDesc": "ROI acima de 100%. Este nível de retorno permite o reinvestimento agressivo e escala rápida do produto.",
+    "goodDesc": "Retorno positivo dentro da média de mercado. Foco em otimização de custos operacionais para aumentar a margem.",
+    "attentionDesc": "O resultado requer atenção. Reavalie a estratégia ou a viabilidade no Discovery."
   },
   "calculators": {
     "roi": {
       "name": "Calculadora de ROI",
+      "fullName": "Retorno sobre Investimento",
       "description": "Analise o Retorno sobre Investimento de features ou produtos com benchmarks de SaaS.",
       "investment": "Custo do Investimento (R$)",
       "return": "Retorno Esperado (R$)",
       "resultLabel": "ROI Estimado",
       "unit": "%"
+    },
+    "cac": {
+      "name": "CAC",
+      "fullName": "Custo de Aquisição de Clientes",
+      "description": "Calcule o custo de aquisição para otimizar seus investimentos de marketing e vendas.",
+      "marketingCost": "Custo de Marketing",
+      "salesCost": "Custo de Vendas",
+      "newCustomers": "Novos Clientes Adquiridos",
+      "resultLabel": "CAC",
+      "unit": ""
+    },
+    "ltv": {
+      "name": "LTV",
+      "fullName": "Lifetime Value",
+      "description": "Calcule o valor do tempo de vida do cliente para entender quanto de receita cada um gera.",
+      "arpu": "Ticket Médio (ARPU)",
+      "lifespan": "Tempo de Vida Médio (meses)",
+      "resultLabel": "LTV",
+      "unit": ""
+    },
+    "mrr": {
+      "name": "MRR/ARR",
+      "fullName": "Receita Recorrente Mensal/Anual",
+      "description": "Calcule a receita recorrente do seu negócio SaaS.",
+      "customers": "Número de Clientes",
+      "avgTicket": "Ticket Médio Mensal",
+      "resultLabel": "MRR",
+      "arrLabel": "ARR",
+      "unit": ""
+    },
+    "grossMargin": {
+      "name": "Margem Bruta",
+      "fullName": "Margem Bruta",
+      "description": "Entenda a rentabilidade básica do seu produto após custos diretos.",
+      "revenue": "Receita Total",
+      "directCosts": "Custos Diretos",
+      "resultLabel": "Margem Bruta",
+      "unit": "%"
+    },
+    "activationRate": {
+      "name": "Taxa de Ativação",
+      "fullName": "Taxa de Ativação",
+      "description": "Meça a porcentagem de usuários que completam a ação chave após o cadastro.",
+      "signups": "Total de Cadastros (Signups)",
+      "activations": "Usuários Ativados",
+      "resultLabel": "Taxa de Ativação",
+      "unit": "%"
+    },
+    "churnRate": {
+      "name": "Churn Rate",
+      "fullName": "Taxa de Churn / Retenção",
+      "description": "Calcule a perda de clientes e a taxa de retenção para monitorar a saúde do negócio.",
+      "startCustomers": "Clientes no Início do Período",
+      "lostCustomers": "Clientes Perdidos no Período",
+      "resultLabel": "Taxa de Churn",
+      "retentionLabel": "Taxa de Retenção",
+      "unit": "%"
+    },
+    "dauMau": {
+      "name": "DAU/MAU",
+      "fullName": "Razão DAU/MAU",
+      "description": "Calcule a proporção de usuários diários sobre mensais para medir o engajamento.",
+      "dau": "Usuários Ativos Diários (DAU)",
+      "mau": "Usuários Ativos Mensais (MAU)",
+      "resultLabel": "Razão DAU/MAU",
+      "unit": "%"
+    },
+    "kFactor": {
+      "name": "Fator-K",
+      "fullName": "Coeficiente de Viralidade",
+      "description": "Calcule o fator de viralidade do seu produto para entender o crescimento orgânico.",
+      "invitesPerUser": "Convites por Usuário",
+      "conversionRate": "Taxa de Conversão (%)",
+      "resultLabel": "Fator-K",
+      "unit": ""
+    },
+    "nps": {
+      "name": "NPS",
+      "fullName": "Net Promoter Score",
+      "description": "Calcule o NPS para medir a lealdade e satisfação dos clientes.",
+      "promoters": "Promotores (9-10)",
+      "passives": "Passivos (7-8)",
+      "detractors": "Detratores (0-6)",
+      "resultLabel": "NPS",
+      "unit": ""
+    },
+    "csat": {
+      "name": "CSAT",
+      "fullName": "Customer Satisfaction Score",
+      "description": "Calcule a pontuação de satisfação baseada em pesquisas diretas.",
+      "positiveResponses": "Respostas Positivas",
+      "totalResponses": "Total de Respostas",
+      "resultLabel": "CSAT",
+      "unit": "%"
+    },
+    "ttv": {
+      "name": "TTV",
+      "fullName": "Time to Value",
+      "description": "Calcule o tempo médio até o cliente perceber valor no uso do produto.",
+      "totalTime": "Tempo Total Somado (horas)",
+      "userCount": "Número de Usuários Avaliados",
+      "resultLabel": "TTV Médio",
+      "unit": "horas"
+    },
+    "taskSuccessRate": {
+      "name": "Taxa de Sucesso",
+      "fullName": "Task Success Rate",
+      "description": "Meça a eficiência de UX vendo quantos completam uma tarefa.",
+      "successfulTasks": "Tarefas com Sucesso",
+      "totalAttempts": "Total de Tentativas",
+      "resultLabel": "Taxa de Sucesso",
+      "unit": "%"
+    },
+    "featureAdoption": {
+      "name": "Adoção de Feature",
+      "fullName": "Taxa de Adoção",
+      "description": "Calcule qual porcentagem da sua base adotou a nova funcionalidade.",
+      "featureUsers": "Usuários da Funcionalidade",
+      "totalUsers": "Base Total de Usuários",
+      "resultLabel": "Taxa de Adoção",
+      "unit": "%"
+    },
+    "leadTime": {
+      "name": "Lead Time",
+      "fullName": "Lead Time para Mudanças",
+      "description": "Tempo médio desde o código (commit) até o deploy em produção.",
+      "avgTime": "Tempo Médio",
+      "timeUnit": "Unidade de Tempo",
+      "hours": "Horas",
+      "days": "Dias",
+      "resultLabel": "Lead Time",
+      "unit": ""
+    },
+    "deploymentFrequency": {
+      "name": "Frequência de Deploy",
+      "fullName": "Deployment Frequency",
+      "description": "Mede a constância de entregas de valor em produção.",
+      "deploys": "Número de Deploys",
+      "period": "Período Analisado (dias)",
+      "resultLabel": "Frequência",
+      "unit": "deploys/dia"
+    },
+    "changeFailureRate": {
+      "name": "Taxa de Falha",
+      "fullName": "Change Failure Rate",
+      "description": "Quantos deploys causam bugs, incidentes ou rollbacks.",
+      "failedDeploys": "Deploys com Falha",
+      "totalDeploys": "Total de Deploys",
+      "resultLabel": "Taxa de Falha",
+      "unit": "%"
+    },
+    "mttr": {
+      "name": "MTTR",
+      "fullName": "Mean Time to Recovery",
+      "description": "Tempo médio para a equipe se recuperar de um incidente em produção.",
+      "totalDowntime": "Tempo de Inatividade (min)",
+      "incidents": "Número de Incidentes",
+      "resultLabel": "MTTR",
+      "unit": "min"
     }
   },
-  "feedback": {
-    "excellent": "Excelente",
-    "excellentDesc": "ROI acima de 100%. Este nível de retorno permite o reinvestimento agressivo e escala rápida do produto.",
-    "good": "Moderado",
-    "goodDesc": "Retorno positivo dentro da média de mercado. Foco em otimização de custos operacionais para aumentar a margem.",
-    "attention": "Risco de Viabilidade",
-    "attentionDesc": "O custo de investimento está muito próximo ou acima do retorno. Reavalie a viabilidade no Discovery."
+  "footer": {
+    "about": "Sobre PMToolkit",
+    "aboutDesc": "Uma coleção de ferramentas e calculadoras para Product Managers.",
+    "roadmap": "Roadmap",
+    "prds": "PRDs",
+    "canvas": "Business Model Canvas",
+    "creator": "Sobre o Criador",
+    "creatorDesc": "Product Manager apaixonado por dados e ferramentas que facilitam a tomada de decisão.",
+    "references": "Referências",
+    "referencesDesc": "Materiais recomendados para aprofundar seu conhecimento.",
+    "copyright": "© 2026 PMToolkit. Todos os direitos reservados."
   }
 }

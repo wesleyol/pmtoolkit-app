@@ -1,4 +1,11 @@
 {
+  "common": {
+    "home": "Home",
+    "back": "Back"
+  },
+  "app": {
+    "name": "PMToolkit",
+{
   "app": {
     "name": "PMToolkit",
     "tagline": "Product Management Tools",
