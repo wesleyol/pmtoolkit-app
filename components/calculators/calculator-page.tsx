@@ -115,11 +115,11 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
             values={values}
           />
           
-          {result !== null && (
+         {result !== null && (
             <ChartExport 
-              slug={slug} 
+              calculator={calculator} 
               result={result} 
-              values={values} 
+              values={values}
             />
           )}
         </div>
