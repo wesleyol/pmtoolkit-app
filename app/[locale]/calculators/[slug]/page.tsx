@@ -8,13 +8,15 @@ interface Props {
 
 export default async function CalculatorRoute({ params }: Props) {
   const { slug } = await params
+  
+  // Apenas validamos no servidor se ela existe
   const calculator = getCalculatorBySlug(slug)
-
   if (!calculator) {
     notFound()
   }
 
-  return <CalculatorPage calculator={calculator} />
+  // Passamos APENAS o texto (slug) para o componente cliente, e não o objeto com funções
+  return <CalculatorPage slug={slug} />
 }
 
 export function generateStaticParams() {
