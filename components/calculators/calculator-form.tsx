@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -14,8 +15,8 @@ interface CalculatorFormProps {
   values: Record<string, number>
   onChange: (key: string, value: number) => void
   onCalculate: () => void
-  onReset: () => void // Adicionei a tipagem que faltava para o onReset
-  hasResult?: boolean // Coloquei como opcional para não quebrar a página
+  onReset?: () => void
+  hasResult?: boolean
 }
 
 export function CalculatorForm({
@@ -29,9 +30,32 @@ export function CalculatorForm({
 }: CalculatorFormProps) {
   const t = useTranslations()
 
+  // Estado local blindado em formato de texto para permitir digitação fluida
+  const [localValues, setLocalValues] = useState<Record<string, string>>(() => {
+    const init: Record<string, string> = {}
+    fields.forEach(f => {
+      init[f.key] = values[f.key] === 0 ? '' : String(values[f.key])
+    })
+    return init
+  })
+
+  const handleInputChange = (key: string, rawValue: string) => {
+    setLocalValues(prev => ({ ...prev, [key]: rawValue }))
+    // Converte silenciosamente para número para as fórmulas
+    const numValue = rawValue === '' ? 0 : parseFloat(rawValue)
+    onChange(key, isNaN(numValue) ? 0 : numValue)
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onCalculate()
+  }
+
+  const handleReset = () => {
+    if (onReset) onReset()
+    const resetVals: Record<string, string> = {}
+    fields.forEach(f => resetVals[f.key] = '')
+    setLocalValues(resetVals)
   }
 
   return (
@@ -56,16 +80,11 @@ export function CalculatorForm({
                 type="number"
                 min={field.min}
                 max={field.max}
-                step={field.step || "any"} // 'any' permite que o usuário digite decimais livremente
-                // A correção do Zero: Usa '??' no lugar de '||' para não ocultar o 0
-                value={values[field.key] ?? ''} 
-                onChange={(e) => {
-                  const val = e.target.value;
-                  // Se apagar tudo, seta como 0 internamente para a fórmula não quebrar com NaN
-                  onChange(field.key, val === '' ? 0 : parseFloat(val));
-                }}
-                className="bg-zinc-900 border-zinc-800 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all rounded-xl py-6"
-                placeholder="0"
+                step={field.step || "any"}
+                value={localValues[field.key] ?? ''}
+                onChange={(e) => handleInputChange(field.key, e.target.value)}
+                className="bg-zinc-900 border-zinc-800 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all rounded-xl py-6 text-lg"
+                placeholder="Ex: 1000"
               />
             </div>
           ))}
@@ -73,16 +92,16 @@ export function CalculatorForm({
           <div className="flex gap-3 pt-4">
             <Button 
               type="submit" 
-              className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-6 rounded-xl transition-colors"
+              className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-6 rounded-xl transition-colors text-md"
             >
               <Calculator className="mr-2 h-5 w-5" />
               {t('calculator.calculate')}
             </Button>
-            {hasResult && (
+            {hasResult && onReset && (
               <Button 
                 type="button" 
                 variant="outline" 
-                onClick={onReset}
+                onClick={handleReset}
                 className="border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-800 py-6 px-4 rounded-xl"
               >
                 <RotateCcw className="h-5 w-5" />

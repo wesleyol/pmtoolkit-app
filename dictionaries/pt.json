@@ -1,4 +1,14 @@
 {
+  "common": {
+    "home": "Início",
+    "back": "Voltar"
+  },
+  "calculator": {
+    "inputs": "Parâmetros da Análise",
+    "calculate": "Calcular Métrica",
+    "result": "Resultado da Análise"
+  },
+{
   "app": {
     "name": "PMToolkit",
     "tagline": "Ferramentas de Gestão de Produto",

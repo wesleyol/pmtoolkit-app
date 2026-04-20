@@ -44,9 +44,21 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
 
   const [result, setResult] = useState<number | { primary: number; secondary?: number } | null>(null)
 
-  const handleCalculate = useCallback(() => {
-    const calculatedResult = calculator.formula(values)
-    setResult(calculatedResult)
+ const handleCalculate = useCallback(() => {
+    try {
+      const calculatedResult = calculator.formula(values)
+      
+      // TRAVA DE SEGURANÇA: Se houver divisão por zero (Infinity) ou se faltarem dados (NaN), zera o resultado e não "crasha"
+      if (typeof calculatedResult === 'number' && (!isFinite(calculatedResult) || isNaN(calculatedResult))) {
+        setResult(0)
+        return
+      }
+      
+      setResult(calculatedResult)
+    } catch (error) {
+      console.error("Erro no cálculo:", error)
+      setResult(0)
+    }
   }, [calculator, values])
 
   return (
