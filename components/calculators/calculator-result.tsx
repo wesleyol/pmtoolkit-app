@@ -3,13 +3,12 @@
 import { useTranslations } from 'next-intl'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { TrendingUp, TrendingDown, Minus, CheckCircle, AlertTriangle, AlertCircle, Calculator } from 'lucide-react'
+import { TrendingUp, TrendingDown, Minus, CheckCircle, AlertTriangle, Calculator } from 'lucide-react'
 import type { CalculatorDefinition } from '@/lib/calculators/definitions'
 import { getFeedbackLevel } from '@/lib/calculators/definitions'
 
 interface CalculatorResultProps {
   calculator: CalculatorDefinition
-  // 1. A correção na tipagem: O TypeScript agora sabe que o resultado pode começar nulo
   result: number | { primary: number; secondary?: number } | null
 }
 
@@ -37,7 +36,6 @@ const feedbackConfig = {
 export function CalculatorResult({ calculator, result }: CalculatorResultProps) {
   const t = useTranslations()
   
-  // 2. A Blindagem de UX (Empty State): Intercepta o 'null' antes de qualquer cálculo matemático
   if (result === null) {
     return (
       <Card className="bg-[#09090b]/50 border-2 border-dashed border-zinc-800 h-full min-h-[350px] flex items-center justify-center">
@@ -56,7 +54,6 @@ export function CalculatorResult({ calculator, result }: CalculatorResultProps) 
     )
   }
   
-  // 3. Execução Segura: Se o código chegou aqui, garantimos que 'result' NÃO é nulo
   const primaryValue = typeof result === 'number' ? result : result.primary
   const secondaryValue = typeof result === 'object' ? result.secondary : undefined
   
@@ -104,7 +101,7 @@ export function CalculatorResult({ calculator, result }: CalculatorResultProps) 
             </div>
           </div>
 
-          {/* Secondary Result (if exists) */}
+          {/* Secondary Result (if exists) - A tag a mais foi removida deste bloco */}
           {secondaryValue !== undefined && calculator.secondaryResultKey && (
             <div className="flex items-center justify-between rounded-xl bg-zinc-900 border border-zinc-800 p-5">
               <span className="text-sm font-medium text-zinc-400">
@@ -114,7 +111,6 @@ export function CalculatorResult({ calculator, result }: CalculatorResultProps) 
                 {formatValue(secondaryValue, unit)}
               </span>
             </div>
-          </div>
           )}
         </div>
 
