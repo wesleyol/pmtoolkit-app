@@ -1,5 +1,6 @@
 'use client'
 
+import { sendGAEvent } from '@next/third-parties/google'
 import { useState, useCallback, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/i18n/routing'
@@ -52,8 +53,14 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
       ? (isFinite(calculatedResult) ? calculatedResult : 0)
       : calculatedResult;
 
+    // Envio do evento para o GA4
+    sendGAEvent('event', 'use_calculator', {
+      calculator_name: slug,
+      category: calculator.category
+    })
+
     setResult(safeResult)
-  }, [calculator, values])
+  }, [calculator, values, slug])
 
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
