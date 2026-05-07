@@ -58,8 +58,6 @@ export function ChartExport({ calculator, result, values }: ChartExportProps) {
 
   // Prepare chart data based on calculator type
   const getChartData = () => {
-    const unit = t(`calculators.${calculator.slug}.unit`)
-    
     // For calculators with multiple inputs, show comparison
     if (calculator.slug === 'nps') {
       return {

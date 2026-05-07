@@ -45,7 +45,7 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
 
   const [result, setResult] = useState<number | { primary: number; secondary?: number } | null>(null)
 
- const handleCalculate = useCallback(() => {
+  const handleCalculate = useCallback(() => {
     const calculatedResult = calculator.formula(values)
     
     // Se o resultado for Infinito (divisão por zero) ou inválido, tratamos como zero
@@ -108,7 +108,6 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
           <CalculatorForm
             fields={calculator.fields}
             values={values}
-            // A correção: Agora o pai entende a chave e preserva o estado anterior (...prev)
             onChange={(key, value) => setValues(prev => ({ ...prev, [key]: value }))} 
             onCalculate={handleCalculate}
             slug={slug}
@@ -122,7 +121,7 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
             values={values}
           />
           
-         {result !== null && (
+          {result !== null && (
             <ChartExport 
               calculator={calculator} 
               result={result} 
