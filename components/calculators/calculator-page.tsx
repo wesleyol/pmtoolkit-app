@@ -53,10 +53,10 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
       ? (isFinite(calculatedResult) ? calculatedResult : 0)
       : calculatedResult;
 
-    // Envio do evento para o GA4
-    sendGAEvent('event', 'use_calculator', {
-      calculator_name: slug,
-      category: calculator.category
+    // Correção Crítica: Assinatura estrita com 2 parâmetros exigida pelas versões recentes do Next.js
+    sendGAEvent('use_calculator', {
+      calculator_name: String(slug),
+      category: String(calculator.category)
     })
 
     setResult(safeResult)
