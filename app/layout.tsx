@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const geist = Geist({ 
@@ -42,7 +43,12 @@ export default function RootLayout({
     <html lang="pt" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased bg-background">
         {children}
+        
+        {/* Vercel Analytics mantido para métricas base de infraestrutura */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        
+        {/* Injeção do GA4. Substitua "G-XXXXXXXXXX" pelo seu ID real */}
+        <GoogleAnalytics gaId="G-E9GZ8JEXC1" />
       </body>
     </html>
   )
