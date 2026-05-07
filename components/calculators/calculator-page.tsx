@@ -53,10 +53,11 @@ export function CalculatorPage({ slug }: CalculatorPageProps) {
       ? (isFinite(calculatedResult) ? calculatedResult : 0)
       : calculatedResult;
 
-    // Correção Crítica: Assinatura estrita com 2 parâmetros exigida pelas versões recentes do Next.js
-    sendGAEvent('use_calculator', {
-      calculator_name: String(slug),
-      category: String(calculator.category)
+   // Correção Definitiva: A biblioteca do Next.js exige um único objeto
+    sendGAEvent({
+      event: 'use_calculator',
+      calculator_name: slug,
+      category: calculator.category
     })
 
     setResult(safeResult)
