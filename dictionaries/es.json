@@ -5,10 +5,11 @@
     "description": "Calculadoras y herramientas esenciales para Product Managers"
   },
   "nav": {
-    "home": "Inicio",
+    "dashboard": "Panel",
     "calculators": "Calculadoras",
-    "tools": "Herramientas",
-    "about": "Acerca del Creador"
+    "settings": "Configuración",
+    "about": "Sobre el Creador",
+    "categories": "Categorías"
   },
   "categories": {
     "all": "Todas",

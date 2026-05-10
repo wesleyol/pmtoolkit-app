@@ -8,11 +8,12 @@
     "tagline": "Product Management Tools",
     "description": "Essential calculators and tools for Product Managers"
   },
-  "nav": {
-    "home": "Home",
+    "nav": {
+    "dashboard": "Dashboard",
     "calculators": "Calculators",
-    "tools": "Tools",
-    "about": "About the Creator"
+    "settings": "Settings",
+    "about": "About the Creator",
+    "categories": "Categories"
   },
   "categories": {
     "all": "All",
