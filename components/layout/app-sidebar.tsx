@@ -21,26 +21,26 @@ import { Link } from "@/lib/i18n/routing"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   // Utilizamos o namespace "common" conforme o padrão do seu projeto
-  const t = useTranslations("common")
+  const t = useTranslations("nav")
 
   const navMain = [
     {
-      title: t("nav.dashboard"),
+      title: t("dashboard"),
       url: "/",
       icon: LayoutDashboard,
     },
     {
-      title: t("nav.calculators"),
+      title: t("calculators"),
       url: "/calculators",
       icon: Calculator,
     },
     {
-      title: t("nav.about"), // Nova entrada traduzida
-      url: "/about",        // URL que criamos na pasta app/[locale]/about
-      icon: User,           // Ícone de usuário para o perfil do criador
+      title: t("about"),
+      url: "/about",
+      icon: User,
     },
     {
-      title: t("nav.settings"),
+      title: t("settings"),
       url: "/settings",
       icon: Settings2,
     },
