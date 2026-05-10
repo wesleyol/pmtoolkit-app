@@ -12,7 +12,7 @@
     "home": "Início",
     "calculators": "Calculadoras",
     "tools": "Ferramentas",
-    "about": "Sobre"
+    "about": "Sobre o Criador"
   },
   "categories": {
     "all": "Todas",
@@ -222,5 +222,17 @@
     "references": "Referências",
     "referencesDesc": "Materiais recomendados para aprofundar seu conhecimento.",
     "copyright": "© 2026 PMToolkit. Todos os direitos reservados."
+  },
+  "about": {
+    "title": "Sobre o Criador",
+    "role": "Product Owner & Idealizador",
+    "experience_title": "Experiência",
+    "experience_text": "Com sólida trajetória na gestão de produtos digitais, meu foco sempre foi traduzir necessidades complexas de negócios em soluções claras e escaláveis. Já atuei em [Sua Empresa/Setor], liderando a entrega de valor contínuo.",
+    "motivation_title": "Por que o PMToolkit?",
+    "motivation_text": "No dia a dia de Produto, perdemos muito tempo buscando calculadoras dispersas ou montando planilhas do zero. O PMToolkit nasceu da minha vontade de centralizar essas ferramentas essenciais, criando um ecossistema gratuito e de alta performance para a nossa comunidade.",
+    "contact_title": "Vamos conversar?",
+    "contact_text": "Tem uma sugestão de nova calculadora, feedback ou quer trocar uma ideia sobre Produto? Fique à vontade para me mandar uma mensagem.",
+    "email_button": "feedback@pmtoolkit.app",
+    "linkedin_button": "https://www.linkedin.com/in/wesley-rib-oliveira/"
   }
 }

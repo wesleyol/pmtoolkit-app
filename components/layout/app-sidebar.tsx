@@ -1,115 +1,90 @@
-'use client'
+import * as React from "react"
+import {
+  Calculator,
+  LayoutDashboard,
+  Settings2,
+  User, // Novo ícone importado
+} from "lucide-react"
 
-import { useTranslations } from 'next-intl'
-import { usePathname } from 'next/navigation'
-import { Link } from '@/lib/i18n/routing'
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
+  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarFooter
-} from '@/components/ui/sidebar'
-import { 
-  Calculator,
-  TrendingUp,
-  Rocket,
-  Users,
-  Code,
-  Home
-} from 'lucide-react'
-import { categories, calculators } from '@/lib/calculators/definitions'
+  SidebarRail,
+} from "@/components/ui/sidebar"
+import { useTranslations } from "next-intl"
+import { Link } from "@/lib/i18n/routing"
 
-const categoryIcons: Record<string, React.ElementType> = {
-  business: TrendingUp,
-  growth: Rocket,
-  ux: Users,
-  engineering: Code
-}
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  // Utilizamos o namespace "common" conforme o padrão do seu projeto
+  const t = useTranslations("common")
 
-export function AppSidebar() {
-  const t = useTranslations()
-  const pathname = usePathname()
-
-  const isActive = (href: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/(pt|es|en)/, '')
-    return pathWithoutLocale === href || pathWithoutLocale.startsWith(href + '/')
-  }
+  const navMain = [
+    {
+      title: t("nav.dashboard"),
+      url: "/",
+      icon: LayoutDashboard,
+    },
+    {
+      title: t("nav.calculators"),
+      url: "/calculators",
+      icon: Calculator,
+    },
+    {
+      title: t("nav.about"), // Nova entrada traduzida
+      url: "/about",        // URL que criamos na pasta app/[locale]/about
+      icon: User,           // Ícone de usuário para o perfil do criador
+    },
+    {
+      title: t("nav.settings"),
+      url: "/settings",
+      icon: Settings2,
+    },
+  ]
 
   return (
-    <Sidebar className="border-r border-sidebar-border">
-      <SidebarHeader className="border-b border-sidebar-border px-4 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Calculator className="h-4 w-4 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-bold text-foreground">
-              PM<span className="text-primary">Toolkit</span>
-            </span>
-            <span className="text-xs text-muted-foreground">{t('app.tagline')}</span>
-          </div>
-        </Link>
+    <Sidebar collapsible="icon" {...props}>
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <Link href="/">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                  <Calculator className="size-4" />
+                </div>
+                <div className="grid flex-1 text-left text-sm leading-tight">
+                  <span className="truncate font-semibold text-sidebar-foreground">PMToolkit</span>
+                  <span className="truncate text-xs text-sidebar-foreground/60">Product Tools</span>
+                </div>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
-
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive('')}>
-                  <Link href="/">
-                    <Home className="h-4 w-4" />
-                    <span>{t('nav.home')}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {categories.map((category) => {
-          const Icon = categoryIcons[category.key]
-          const categoryCalculators = calculators.filter(c => c.category === category.key)
-          
-          return (
-            <SidebarGroup key={category.key}>
-              <SidebarGroupLabel className="flex items-center gap-2 text-muted-foreground">
-                <Icon className="h-4 w-4" />
-                {t(`categories.${category.key}`)}
-              </SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {categoryCalculators.map((calc) => (
-                    <SidebarMenuItem key={calc.slug}>
-                      <SidebarMenuButton 
-                        asChild 
-                        isActive={isActive(`/calculators/${calc.slug}`)}
-                        className="pl-6"
-                      >
-                        <Link href={`/calculators/${calc.slug}`}>
-                          <span className="text-sm">{t(`calculators.${calc.slug}.name`)}</span>
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          )
-        })}
+        <SidebarMenu className="gap-1 px-2">
+          {navMain.map((item) => (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton asChild tooltip={item.title}>
+                <Link href={item.url}>
+                  <item.icon className="size-4" />
+                  <span>{item.title}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          ))}
+        </SidebarMenu>
       </SidebarContent>
-
-      <SidebarFooter className="border-t border-sidebar-border p-4">
-        <p className="text-xs text-muted-foreground text-center">
-          {t('footer.copyright')}
-        </p>
+      <SidebarFooter>
+        <div className="p-4">
+          {/* Espaço reservado para futuras ações no rodapé */}
+        </div>
       </SidebarFooter>
+      <SidebarRail />
     </Sidebar>
   )
 }
