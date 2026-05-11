@@ -8,8 +8,8 @@ export default function AboutPage() {
   const t = useTranslations('about');
 
   // Insira aqui os seus links reais
-  const emailAddress = "seuemail@exemplo.com"; 
-  const linkedinUrl = "https://linkedin.com/in/seuperfil";
+  const emailAddress = "feedback@pmtoolkit.app"; 
+  const linkedinUrl = "https://www.linkedin.com/in/wesley-rib-oliveira/";
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="flex flex-col items-center md:items-start space-y-6">
           
           {/* Container do Avatar Estático */}
-          <div className="relative w-48 h-48 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-muted">
+          <div className="relative w-36 h-36 md:w-full md:h-auto md:aspect-square rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-muted">
             <img 
               src="/avatar.jpg" 
               alt="Wesley - Product Owner" 

@@ -7,7 +7,6 @@ import { Link } from '@/lib/i18n/routing'
 import {
   Calculator,
   LayoutDashboard,
-  Settings2,
   User,
   ChevronRight,
   TrendingUp,
@@ -29,7 +28,6 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
   SidebarGroup,
-  SidebarGroupLabel,
 } from "@/components/ui/sidebar"
 import {
   Collapsible,
@@ -46,11 +44,9 @@ const categoryIcons: Record<string, React.ElementType> = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  // Retiramos o escopo "nav" para que ele consiga ler todo o JSON novamente
   const t = useTranslations()
   const pathname = usePathname()
 
-  // Função que verifica se a página atual é a do link para deixá-lo "aceso"
   const isActive = (href: string) => {
     const pathWithoutLocale = pathname.replace(/^\/(pt|es|en)/, '')
     return pathWithoutLocale === href || pathWithoutLocale.startsWith(href + '/')
@@ -77,7 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
 
       <SidebarContent>
-        {/* Dashboard */}
+        {/* Seção Início */}
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
@@ -91,9 +87,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenu>
         </SidebarGroup>
 
-        {/* Calculadoras Agrupadas */}
+        {/* Seção Calculadoras - Título formatado como Tópico Principal */}
         <SidebarGroup>
-          <SidebarGroupLabel>{t("nav.calculators")}</SidebarGroupLabel>
+          <div className="px-2 py-3">
+             <h2 className="text-sm font-bold tracking-tight text-foreground/90 uppercase px-2 mb-2">
+                {t("nav.calculators")}
+             </h2>
+          </div>
+          
           <SidebarMenu>
             {categories.map((category) => {
               const Icon = categoryIcons[category.key]
@@ -129,23 +130,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenu>
         </SidebarGroup>
 
-        {/* Links do Criador e Configurações */}
-        <SidebarGroup>
+        {/* Seção Informações */}
+        <SidebarGroup className="mt-auto">
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild tooltip={t("nav.about")} isActive={isActive('/about')}>
                 <Link href="/about">
                   <User className="size-4" />
                   <span>{t("nav.about")}</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip={t("nav.settings")} isActive={isActive('/settings')}>
-                <Link href="/settings">
-                  <Settings2 className="size-4" />
-                  <span>{t("nav.settings")}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
