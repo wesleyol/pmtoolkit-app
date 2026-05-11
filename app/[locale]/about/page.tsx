@@ -46,8 +46,10 @@ export default function AboutPage() {
                 {t('email_button')}
               </a>
             </Button>
-            <Button asChild variant="outline" className="w-full flex items-center gap-2">
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <Button asChild className="w-full flex items-center gap-2">
+            <a href={linkedinUrl}>
+           {/*<Button asChild variant="outline" className="w-full flex items-center gap-2">
+              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">*/}
                 <Linkedin className="w-4 h-4" />
                 {t('linkedin_button')}
               </a>
