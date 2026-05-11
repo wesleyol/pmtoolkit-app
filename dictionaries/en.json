@@ -225,15 +225,15 @@
     "copyright": "© 2026 PMToolkit. All rights reserved."
   },
   "about": {
-    "title": "Sobre o Criador",
-    "role": "Product Owner & Idealizador",
-    "experience_title": "Experiência",
-    "experience_text": "Com sólida trajetória na gestão de produtos digitais, meu foco sempre foi traduzir necessidades complexas de negócios em soluções claras e escaláveis. Já atuei em [Sua Empresa/Setor], liderando a entrega de valor contínuo.",
-    "motivation_title": "Por que o PMToolkit?",
-    "motivation_text": "No dia a dia de Produto, perdemos muito tempo buscando calculadoras dispersas ou montando planilhas do zero. O PMToolkit nasceu da minha vontade de centralizar essas ferramentas essenciais, criando um ecossistema gratuito e de alta performance para a nossa comunidade.",
-    "contact_title": "Vamos conversar?",
-    "contact_text": "Tem uma sugestão de nova calculadora, feedback ou quer trocar uma ideia sobre Produto? Fique à vontade para me mandar uma mensagem.",
-    "email_button": "feedback@pmtoolkit.app",
-    "linkedin_button": "https://www.linkedin.com/in/wesley-rib-oliveira/"
+    "title": "About the Creator",
+    "role": "Product Owner & Founder",
+    "experience_title": "Experience",
+    "experience_text": "With a solid background in digital product management, I specialize in translating complex business needs into practical, scalable, and value-driven solutions. I have experience in backlog definition and prioritization, aligning business and technology teams, project follow-up, and continuous product improvement. Throughout my career, I have contributed to the evolution of digital solutions focused on operational efficiency, user experience, and strategic business results. I use both agile and traditional methodologies in project management, prioritizing initiatives based on data, impact, and business value. I have worked as a Product Owner on critical systems used by organizations such as the Tribunal Superior Eleitoral, Correios, Banco do Estado do Espírito Santo, and Sabesp, in addition to personal initiatives such as a SaaS platform for receivables reconciliation and a series of automated reports and dashboards for marketplace sellers.",
+    "motivation_title": "Why PMToolkit?",
+    "motivation_text": "In the day-to-day of Product Management, it is common to need tools that support analysis, decision-making, and quick validations. However, many of these solutions do not clearly explain the logic behind the results or provide market references that help contextualize the generated information. With this in mind, I created a web application that centralizes essential tools for Product professionals, bringing together practicality, context, and market benchmarks in a single free ecosystem designed for the community.",
+    "contact_title": "Let’s Connect",
+    "contact_text": "Do you have suggestions for new tools, feedback about the platform, or would you like to exchange ideas about Product Management, technology, and innovation? I’d be happy to hear from you and connect with professionals from the community.",
+    "email_button": "e-mail",
+    "linkedin_button": "linkedin"
   }
 }

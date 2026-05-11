@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
 
           <div className="w-full space-y-3 text-center md:text-left">
-            <h2 className="text-2xl font-bold text-foreground">Wesley</h2>
+            <h2 className="text-2xl font-bold text-foreground">Wesley Oliveira</h2>
             <p className="text-muted-foreground font-medium flex items-center justify-center md:justify-start gap-2">
               <Briefcase className="w-4 h-4" />
               {t('role')}

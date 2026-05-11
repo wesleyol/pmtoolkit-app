@@ -228,12 +228,12 @@
     "title": "Sobre o Criador",
     "role": "Product Owner & Idealizador",
     "experience_title": "Experiência",
-    "experience_text": "Com sólida trajetória na gestão de produtos digitais, meu foco sempre foi traduzir necessidades complexas de negócios em soluções claras e escaláveis. Já atuei em [Sua Empresa/Setor], liderando a entrega de valor contínuo.",
-    "motivation_title": "Por que o PMToolkit?",
-    "motivation_text": "No dia a dia de Produto, perdemos muito tempo buscando calculadoras dispersas ou montando planilhas do zero. O PMToolkit nasceu da minha vontade de centralizar essas ferramentas essenciais, criando um ecossistema gratuito e de alta performance para a nossa comunidade.",
+    "experience_text": "Com sólida trajetória na gestão de produtos digitais, atuo na tradução de necessidades complexas de negócio em soluções práticas, escaláveis e orientadas à geração de valor. Tenho experiência na definição e priorização de backlog, alinhamento entre áreas de negócio e tecnologia, acompanhamento de projetos e melhoria contínua de produtos. Ao longo da minha atuação, contribuí para a evolução de soluções digitais com foco em eficiência operacional, experiência do usuário e resultados estratégicos para a empresa. Utilizo metodologias ágeis e tradicionais na gestão de projetos, priorizando iniciativas com base em dados, impacto e valor para o negócio. Atuei como Product Owner em sistemas críticos utilizados por organizações como o Tribunal Superior Eleitoral, Correios, Banco do Estado do Espírito Santo e Sabesp, além de iniciativas próprias, como um SaaS para conciliação de recebíveis e uma série de relatórios e dashboards automatizados para vendedores de marketplaces.",
+    "motivation_title": "Por que o PMToolkit?", 
+    "motivation_text": "No dia a dia de Produto, é comum precisarmos de ferramentas que apoiem análises, decisões e validações rápidas. Porém, muitas vezes essas soluções não explicam claramente a lógica por trás dos resultados nem oferecem referências de mercado que ajudem a contextualizar as informações geradas. Pensando nisso, criei uma aplicação web que centraliza ferramentas essenciais para profissionais de Produto, reunindo praticidade, contexto e benchmarks de mercado em um único ecossistema gratuito voltado para a comunidade.",    
     "contact_title": "Vamos conversar?",
-    "contact_text": "Tem uma sugestão de nova calculadora, feedback ou quer trocar uma ideia sobre Produto? Fique à vontade para me mandar uma mensagem.",
-    "email_button": "feedback@pmtoolkit.app",
-    "linkedin_button": "https://www.linkedin.com/in/wesley-rib-oliveira/"
+    "contact_text": "Tem alguma sugestão de nova ferramenta, feedback sobre a plataforma ou quer trocar ideias sobre Produto, tecnologia e inovação? Ficarei feliz em receber sua mensagem e conectar com profissionais da comunidade.",
+    "email_button": "e-mail",
+    "linkedin_button": "linkedin"
   }
 }

@@ -221,15 +221,15 @@
     "copyright": "© 2024 PMToolkit. Todos los derechos reservados."
   },
   "about": {
-    "title": "Sobre o Criador",
-    "role": "Product Owner & Idealizador",
-    "experience_title": "Experiência",
-    "experience_text": "Com sólida trajetória na gestão de produtos digitais, meu foco sempre foi traduzir necessidades complexas de negócios em soluções claras e escaláveis. Já atuei em [Sua Empresa/Setor], liderando a entrega de valor contínuo.",
-    "motivation_title": "Por que o PMToolkit?",
-    "motivation_text": "No dia a dia de Produto, perdemos muito tempo buscando calculadoras dispersas ou montando planilhas do zero. O PMToolkit nasceu da minha vontade de centralizar essas ferramentas essenciais, criando um ecossistema gratuito e de alta performance para a nossa comunidade.",
-    "contact_title": "Vamos conversar?",
-    "contact_text": "Tem uma sugestão de nova calculadora, feedback ou quer trocar uma ideia sobre Produto? Fique à vontade para me mandar uma mensagem.",
-    "email_button": "feedback@pmtoolkit.app",
-    "linkedin_button": "https://www.linkedin.com/in/wesley-rib-oliveira/"
+    "title": "Sobre el Creador",
+    "role": "Product Owner e Ideador",
+    "experience_title": "Experiencia",
+    "experience_text": "Con una sólida trayectoria en la gestión de productos digitales, me especializo en traducir necesidades complejas del negocio en soluciones prácticas, escalables y orientadas a la generación de valor. Tengo experiencia en la definición y priorización de backlog, alineación entre áreas de negocio y tecnología, seguimiento de proyectos y mejora continua de productos. A lo largo de mi trayectoria, he contribuido a la evolución de soluciones digitales enfocadas en la eficiencia operativa, la experiencia del usuario y los resultados estratégicos para la empresa. Utilizo metodologías ágiles y tradicionales en la gestión de proyectos, priorizando iniciativas basadas en datos, impacto y valor para el negocio. Me desempeñé como Product Owner en sistemas críticos utilizados por organizaciones como el Tribunal Superior Eleitoral, Correios, Banco do Estado do Espírito Santo y Sabesp, además de iniciativas propias, como un SaaS para conciliación de cuentas por cobrar y una serie de informes y dashboards automatizados para vendedores de marketplaces.",
+    "motivation_title": "¿Por qué PMToolkit?",
+    "motivation_text": "En el día a día de Producto, es común necesitar herramientas que apoyen análisis, toma de decisiones y validaciones rápidas. Sin embargo, muchas de estas soluciones no explican claramente la lógica detrás de los resultados ni ofrecen referencias de mercado que ayuden a contextualizar la información generada. Pensando en ello, creé una aplicación web que centraliza herramientas esenciales para profesionales de Producto, reuniendo practicidad, contexto y benchmarks de mercado en un único ecosistema gratuito orientado a la comunidad.",
+    "contact_title": "¿Hablamos?",
+    "contact_text": "¿Tienes alguna sugerencia de nueva herramienta, comentarios sobre la plataforma o te gustaría intercambiar ideas sobre Producto, tecnología e innovación? Estaré encantado de recibir tu mensaje y conectar con profesionales de la comunidad.",
+    "email_button": "e-mail",
+    "linkedin_button": "linkedin"
   }
 }
