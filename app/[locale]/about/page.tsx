@@ -47,9 +47,8 @@ export default function AboutPage() {
               </a>
             </Button>
             <Button asChild className="w-full flex items-center gap-2">
-            <a href={linkedinUrl}>
-           {/*<Button asChild variant="outline" className="w-full flex items-center gap-2">
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">*/}
+              {/* Adicionado target="_blank" para abrir em nova aba */}
+              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4" />
                 {t('linkedin_button')}
               </a>
@@ -67,7 +66,8 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{t('experience_title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              {/* Classe text-justify adicionada aqui */}
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 {t('experience_text')}
               </p>
             </CardContent>
@@ -81,7 +81,8 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{t('motivation_title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              {/* Classe text-justify adicionada aqui */}
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 {t('motivation_text')}
               </p>
             </CardContent>
@@ -95,7 +96,8 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{t('contact_title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              {/* Classe text-justify adicionada aqui */}
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 {t('contact_text')}
               </p>
             </CardContent>
